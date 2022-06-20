@@ -1,0 +1,27 @@
+.App{
+  width: 100%;
+  min-height: 100vh;
+  background-image:linear-gradient(to right bottom, rgba(0, 0, 255, 0.584), rgba(255, 0, 0, 0.727)),
+   url('./images/bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.fx-m{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.animo{
+  animation: anim .5s ease-in-out 0s 1 normal forwards;
+}
+@keyframes anim {
+  0%,100%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+}
