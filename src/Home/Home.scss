@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
+.container{
+    & h1{
+        color: #fff;
+        font-family: 'League Gothic', sans-serif;
+        letter-spacing: 2px;
+    }
+    &_content{
+        & p{
+         font-size: 1.2rem;
+         color: #fff;
+         font-family: 'Changa', sans-serif;
+        }
+        
+    }
+}

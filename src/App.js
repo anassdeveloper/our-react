@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Contact from "./Contact/Contact";
 import Home from "./Home/Home";
+import Footer from './Footer/Footer'
 
 function App(){
     return(
@@ -18,9 +19,13 @@ function App(){
                         <Route exact path="/">
                            <Home />
                         </Route>
+                        <Route path="/our-react">
+                            <Home />
+                        </Route>
 
                     </Switch>
                 </div>
+                <Footer />
              </div>
         </Router>
     )

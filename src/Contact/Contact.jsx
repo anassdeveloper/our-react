@@ -1,4 +1,4 @@
-import "./Contact.scss";
+import "./Contact.css";
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -27,7 +27,7 @@ import emailjs from '@emailjs/browser';
  if(msgError){
   return (
     <div className="container fx-m text-center py-4 animo">
-      <h2 className="display-6">Contact Us by Send message</h2>
+      <h2 className="display-6 fon-fa">Contact Us by Send message</h2>
               
     <form ref={form} onSubmit={sendEmail} className="col-lg-6 col-12 py-3">
        <div className="form-floating mb-1">
