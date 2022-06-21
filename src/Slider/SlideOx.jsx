@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import andrei from "../images/andrei.jpg";
@@ -8,92 +8,90 @@ import jonasa from "../images/jonasa.jpg";
 
 import "./slider.css";
 
-class SlideOx extends Component{
-    state = {
-        curSlide: 0,
-        slideLenght: 0,
-    }
+function SlideOx({bigH, bigW, second, w}){
+    let [curSlide, setCurSlide] = useState(0);
+    const [slideLenght, setSlideLength] = useState(0);
     
-    addAllElement = (num) => {
+    const addAllElement = (num) => {
         const selectAllSlide = Array.from(document.querySelectorAll('.slide'));
         let s = selectAllSlide.length;
-        this.setState({slideLenght: s});
+        setSlideLength(s);
         
         selectAllSlide.forEach((el, i) => {
             el.style.transform = `translateX(${100 * (i - num)}%)`
         })
         
     }
-    componentDidMount(){
-         this.addAllElement(0);
+    useEffect(() => {
+         addAllElement(0);
          //alert(this.state.slideLenght)
-    }
+    },[])
      
     
 
-    nextSlide = () => {
-        if(this.state.curSlide < this.state.slideLenght - 1) {
-            this.setState({curSlide: this.state.curSlide+=1})
+    const nextSlide = () => {
+        if(curSlide < slideLenght - 1) {
+            setCurSlide(curSlide+=1)
         }
         else {
-            this.setState({curSlide: 0})
-            this.addAllElement(0);
+            setCurSlide(0)
+            addAllElement(0);
             return -1;
         };
 
-        this.addAllElement(this.state.curSlide);
+        addAllElement(curSlide);
      }
-     previouSlide = () => {
-        if(this.state.curSlide !== 0){
-            this.setState({curSlide:this.state.curSlide-=1})
+     const previouSlide = () => {
+        if(curSlide !== 0){
+            setCurSlide(curSlide-=1)
         }else{
-            this.setState({curSlide: this.state.slideLenght -1})
-            this.addAllElement(this.state.slideLenght - 1);
+            setCurSlide(slideLenght -1)
+            addAllElement(slideLenght - 1);
             return -1;
         }
-        this.addAllElement(this.state.curSlide)
+        addAllElement(curSlide)
     }
-    render(){
+    
         
         return(
             <div className="slider" style={{
-                width: this.props.bigW,
-                height: this.props.bigH,
+                width: bigW,
+                height: bigH,
             }}>
          <div className="slide" style={{
-            width:this.props.w,
-            transition: `transform ${this.props.second} ease-in-out`
+            width:w,
+            transition: `transform ${second} ease-in-out`
             }}>
               <img src={andrei} alt="" width="100%" height="100%" />
           </div>
           <div className="slide" style={{
-            width:this.props.w,
-            transition: `transform ${this.props.second} ease-in-out`
+            width:w,
+            transition: `transform ${second} ease-in-out`
             }}>
               <img src={jonas} alt="" width="100%" height="100%" />
           </div>
           <div className="slide" style={{
-            width:this.props.w,
-            transition: `transform ${this.props.second} ease-in-out`
+            width:w,
+            transition: `transform ${second} ease-in-out`
             }}>
                <img src={andreijs} alt="" width="100%" height="100%" />
           </div>
           <div className="slide" style={{
-            width:this.props.w,
-            transition: `transform ${this.props.second} ease-in-out`
+            width:w,
+            transition: `transform ${second} ease-in-out`
             }}>
                <img src={jonasa} alt="" width="100%" height="100%" />
           </div>
-          <button id="previous" onClick={this.previouSlide}>
+          <button id="previous" onClick={previouSlide}>
               <FontAwesomeIcon icon={faAngleLeft} />
           </button>
-          <button id="next" onClick={this.nextSlide}>
+          <button id="next" onClick={nextSlide}>
               <FontAwesomeIcon icon={faAngleRight} />
           </button>
         </div>
         
         )
-    }
+    
 }
 
 export default SlideOx;
