@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/our-react/static/css/main.44571dce.css",
-    "main.js": "/our-react/static/js/main.698a0111.js",
+    "main.css": "/our-react/static/css/main.e0b832ce.css",
+    "main.js": "/our-react/static/js/main.6c807c97.js",
     "static/media/bg1.jpg": "/our-react/static/media/bg1.7f13f23747c773650124.jpg",
+    "static/media/jonasa.jpg": "/our-react/static/media/jonasa.5b0aa717a143ceca8580.jpg",
+    "static/media/jonas.jpg": "/our-react/static/media/jonas.54c9e89ac44b4e43eaf9.jpg",
+    "static/media/andrei.jpg": "/our-react/static/media/andrei.f7898e34a0c4ec45fa6a.jpg",
+    "static/media/andreijs.jpg": "/our-react/static/media/andreijs.22990adc7a45298cbfdb.jpg",
     "static/media/profil.jpg": "/our-react/static/media/profil.9083684d2f6ab0149087.jpg",
     "index.html": "/our-react/index.html",
-    "main.44571dce.css.map": "/our-react/static/css/main.44571dce.css.map",
-    "main.698a0111.js.map": "/our-react/static/js/main.698a0111.js.map"
+    "main.e0b832ce.css.map": "/our-react/static/css/main.e0b832ce.css.map",
+    "main.6c807c97.js.map": "/our-react/static/js/main.6c807c97.js.map"
   },
   "entrypoints": [
-    "static/css/main.44571dce.css",
-    "static/js/main.698a0111.js"
+    "static/css/main.e0b832ce.css",
+    "static/js/main.6c807c97.js"
   ]
 }
