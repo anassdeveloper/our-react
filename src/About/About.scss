@@ -1,0 +1,32 @@
+.about{
+    
+    &_card{
+        height: 22rem;
+        border-radius: 4px;
+         
+        &_1{
+            & h2{
+                font-size: 3rem;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                letter-spacing: 1.5px;
+                
+            }
+        }
+    }
+    
+}
+@media screen and(max-width:500px) {
+    .about{
+        &_card{
+            height: 15rem;
+            margin-top: 2rem !important;
+            &_1{
+                text-align: center;
+                & h2{
+                    font-size: 2.6rem;
+                }
+            }
+        }
+    }
+    
+}

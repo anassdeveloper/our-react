@@ -6,6 +6,7 @@ import Contact from "./Contact/Contact";
 import Home from "./Home/Home";
 import Footer from './Footer/Footer';
 import Services from "./Services/Services";
+import About from "./About/About";
 
 function App(){
     return(
@@ -26,6 +27,10 @@ function App(){
                         <Route path="/services">
                             <Services />
                         </Route>
+                        <Route path="/about">
+                            <About />
+                        </Route>
+
 
 
                     </Switch>
