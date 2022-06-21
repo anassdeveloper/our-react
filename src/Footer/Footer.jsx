@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <div className="container text-center">
+        <div className="container text-center py-3">
             <p style={{
                 fontSize: '1.1rem',
                 color:'gray',

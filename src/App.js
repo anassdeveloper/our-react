@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Contact from "./Contact/Contact";
 import Home from "./Home/Home";
-import Footer from './Footer/Footer'
+import Footer from './Footer/Footer';
+import Services from "./Services/Services";
 
 function App(){
     return(
@@ -22,6 +23,10 @@ function App(){
                         <Route path="/our-react">
                             <Home />
                         </Route>
+                        <Route path="/services">
+                            <Services />
+                        </Route>
+
 
                     </Switch>
                 </div>
